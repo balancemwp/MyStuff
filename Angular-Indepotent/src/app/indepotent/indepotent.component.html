@@ -1,0 +1,5 @@
+<app-header [title]="appTitle" ></app-header>
+  <button (click)="changeTitle()">change title</button>
+  <app-question [question]="question" [links]="applinks" [talkoffs]="talkoffs"></app-question>
+  <app-answer [answer]="answer"></app-answer>
+  <p>Angular version: {{angularVersion}}</p>

@@ -1,0 +1,21 @@
+<div class="talkoffs" *ngFor="let talk of talkOffs; index as i" class="item">
+  <mat-checkbox color="primary" [checked]="talk.IsSelected" (change)="checkbox_Change($event, talk);">
+    <ng-container *ngIf="talk.HasOptionalFreeFormText; then textWithInput; else textOnly">
+    </ng-container>
+    <ng-template #textWithInput>
+      <span>{{talk.AssemblyText[0]}}</span>
+      <span>
+        <mat-form-field [floatLabel]="'never'">
+          <input placeholder="Enter Value" [(ngModel)]="talk.OptionalFreeFormText" [value]="talk.OptionalFreeFormText" matInput (blur)="onblur(talk)"
+            (keydown)="onKey(talk)" />
+        </mat-form-field>
+      </span>
+      <span> {{talk.AssemblyText[1]}}</span>
+    </ng-template>
+    <ng-template #textOnly>
+      <div>
+        {{talk.Text}}
+      </div>
+    </ng-template>
+  </mat-checkbox>
+</div>

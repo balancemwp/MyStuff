@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  question = 'Is this easy?';
-  answer = 'Yep!';
 
   constructor() {console.clear(); }
-
-  dontDoThis() {return [1, 2, 3]; }
 }
 
 

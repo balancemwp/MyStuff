@@ -1,0 +1,17 @@
+
+<div class="binding">
+
+  <mat-form-field>
+    <mat-select placeholder="Category" (selectionChange)="changeValue($event)">
+      <mat-option *ngFor="let category of categories" [value]="category.id">
+        {{ category.Text }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="talkoffs" [hidden]="isHidden">
+      <app-talkoff [talkOffs]="talkoffs"></app-talkoff>
+    </div>
+  
+</div>
+

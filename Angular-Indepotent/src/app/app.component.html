@@ -1,7 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="title">{{title}}</div>
-<dl>
-  <dt>Question: {{question}}</dt>
-  <dd>Answer: {{answer}}</dd>
-</dl>
-<div *ngFor="let item of dontDoThis()">{{item}}</div>
+
+<div class="container">
+<mat-tab-group>
+ 
+  <mat-tab label="Binding">
+    <app-binding></app-binding>
+  </mat-tab>
+  <mat-tab label="Idenpotent">
+    <app-indepotent></app-indepotent>
+  </mat-tab>
+</mat-tab-group>
+</div>
+
+
